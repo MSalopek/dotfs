@@ -36,6 +36,9 @@ zplug "unixorn/git-extra-commands"
 zplug "clvv/fasd", as:command, hook-build:"PREFIX=$HOME/.local make install"
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
+zplug "junegunn/fzf", use:"shell/key-bindings.zsh", defer:3
+fpath=($HOME/.zplug/repos/littleq0903/gcloud-zsh-completion/src $fpath)
+
 zplug load #--verbose
 zplug check --verbose
 if [ ! $? -eq 0 ]; then
