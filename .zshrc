@@ -80,4 +80,6 @@ alias gc='git commit'
 alias gp='git push'
 alias gss='git status'
 alias gst='git stash'
-alias cd..='cd ..' 
+alias cd..='cd ..'
+
+unsetopt correct
