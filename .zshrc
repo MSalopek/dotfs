@@ -74,6 +74,7 @@ ZSH_THEME="dracula"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 
+# set aliasing
 alias ls='ls -a --color=auto'
 alias gia='git add'
 alias gc='git commit'
@@ -81,5 +82,6 @@ alias gp='git push'
 alias gss='git status'
 alias gst='git stash'
 alias cd..='cd ..'
+alias top='htop'
 
 unsetopt correct
