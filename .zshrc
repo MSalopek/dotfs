@@ -73,6 +73,9 @@ ZSH_THEME="dracula"
 # setup golang
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+PATH=$PATH:$GOPATH:$GOBIN
+export PATH
 
 # set aliasing
 alias ls='ls -a --color=auto'
