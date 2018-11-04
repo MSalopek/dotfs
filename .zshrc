@@ -88,3 +88,5 @@ alias cd..='cd ..'
 alias top='htop'
 
 unsetopt correct
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
