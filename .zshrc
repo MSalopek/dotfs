@@ -77,6 +77,11 @@ export GOBIN=$GOPATH/bin
 PATH=$PATH:$GOPATH:$GOBIN
 export PATH
 
+# setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+
 # set aliasing
 alias ls='ls -a --color=auto'
 alias gia='git add'

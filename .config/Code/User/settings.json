@@ -9,6 +9,8 @@
     "editor.minimap.enabled": false,
     "keyboard.dispatch": "keyCode",
     "go.autocompleteUnimportedPackages": true,
-    "python.linting.pep8Enabled": false
+    "python.linting.pep8Enabled": false,
+    "extensions.ignoreRecommendations": false,
+    "[xml]": {}
 }
 
