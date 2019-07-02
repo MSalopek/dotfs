@@ -11,6 +11,17 @@
     "go.autocompleteUnimportedPackages": true,
     "python.linting.pep8Enabled": false,
     "extensions.ignoreRecommendations": false,
-    "[xml]": {}
+    "[xml]": {},
+    "[python]": {},
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+      },
+    "editor.parameterHints.enabled": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.wordBasedSuggestions": false,
+    "editor.acceptSuggestionOnEnter": "on"
 }
 
