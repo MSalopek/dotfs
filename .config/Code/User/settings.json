@@ -1,15 +1,13 @@
 {
     "window.zoomLevel": -1,
     "workbench.startupEditor": "newUntitledFile",
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/**": true
-    },
     "editor.minimap.enabled": false,
     "keyboard.dispatch": "keyCode",
     "go.autocompleteUnimportedPackages": true,
-    "python.linting.pep8Enabled": false,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--errors-only"
+    ],
     "extensions.ignoreRecommendations": false,
     "[xml]": {},
     "[python]": {},
@@ -27,6 +25,6 @@
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/*/**": true
-  }
+    }
 }
 
