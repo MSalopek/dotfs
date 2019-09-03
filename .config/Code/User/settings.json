@@ -4,23 +4,21 @@
     "editor.minimap.enabled": false,
     "keyboard.dispatch": "keyCode",
     "go.autocompleteUnimportedPackages": true,
+    "python.lintOnSave": true,
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
         "--errors-only"
     ],
-    "extensions.ignoreRecommendations": false,
-    "[xml]": {},
-    "[python]": {},
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.parameterHints.enabled": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.wordBasedSuggestions": false,
+    "editor.acceptSuggestionOnEnter": "on",
     "editor.quickSuggestions": {
         "other": false,
         "comments": false,
         "strings": false
-      },
-    "editor.parameterHints.enabled": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.wordBasedSuggestions": false,
-    "editor.acceptSuggestionOnEnter": "on",
+    },
+    "editor.tabCompletion": "on",
     "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
