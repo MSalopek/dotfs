@@ -1,5 +1,7 @@
 ### Setup and pull
-git clone https://github.com/MSalopek/dotfs  
+git init  
+git remote add origin https://github.com/MSalopek/dotfs  
+git pull origin master
 
 ## Additional steps
 - Install zsh and set it as global shell.
