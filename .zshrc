@@ -1,97 +1,115 @@
-export ZPLUG_HOME=$HOME/.zplug
-if [[ ! -d $ZPLUG_HOME ]]; then
-    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
-fi
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source $ZPLUG_HOME/init.zsh
+# Path to your oh-my-zsh installation.
+export ZSH="/home/msalopek/.oh-my-zsh"
 
-if [[ -f $HOME/.zshrc.local ]]; then
-	source $HOME/.zshrc.local
-fi
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-syntax-highlighting"
-# zplug "zsh-users/zsh-autosuggestions"
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-#d prints the contents of the directory stack.
-#1 ... 9 changes the directory to the n previous one.
-zplug "zsh-users/prezto", use:"modules/{utility,directory,git,environment,editor,history,completion}"
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# zplug 'eendroroy/alien-minimal', as:theme
-zplug "dracula/zsh", as:theme
-zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'cursor' \
-  'root'
-zplug "plugins/wd",   from:oh-my-zsh
-zplug "plugins/pip",   from:oh-my-zsh
-zplug "plugins/colored-man-pages",   from:oh-my-zsh
-zplug "plugins/fasd",   from:oh-my-zsh
-zplug "djui/alias-tips"
-zplug "unixorn/git-extra-commands"
-zplug "clvv/fasd", as:command, hook-build:"PREFIX=$HOME/.local make install"
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-zplug "junegunn/fzf", use:"shell/key-bindings.zsh", defer:3
-fpath=($HOME/.zplug/repos/littleq0903/gcloud-zsh-completion/src $fpath)
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
-zplug load #--verbose
-zplug check --verbose
-if [ ! $? -eq 0 ]; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-export HISTSIZE=1000000
-export SAVEHIST=1000000
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
-zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' menu select
-setopt no_complete_aliases
-setopt HIST_IGNORE_DUPS
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-for p in "$HOME/.local/bin" "$HOME/bin" "$ZPLUG_BIN"; do
-  if [ -d $p ]; then
-    export PATH=$p:$PATH
-  fi
-done
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-for p in "$HOME/.local/man" "$HOME/.local/share/man"; do
-  if [ -d $p ]; then
-    export MANPATH=$p:$MANPATH
-  fi
-done
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-ZSH_THEME="dracula"
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-# setup golang
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# go path
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-PATH=$PATH:$GOPATH:$GOBIN
-export PATH
+export PATH=$PATH:$HOME/go/bin
 
-# setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+# npm globals path
+export PATH=$PATH:$HOME/.npm-global/bin
 
-# set aliasing
-alias ls='ls -a --color=auto'
+# useful aliases
+alias ll='ls -alh --color=auto'
 alias gia='git add'
-alias gc='git commit'
-alias gp='git push'
+alias gic='git commit'
+alias gip='git push'
 alias gss='git status'
-alias gst='git stash'
 alias cd..='cd ..'
 alias top='htop'
 
-unsetopt correct
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
