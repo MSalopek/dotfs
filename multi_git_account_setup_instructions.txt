@@ -1,0 +1,15 @@
+# Use GH and GL on the same machine                                             
+# global git user/email is set to match the used service                        
+# you can also use --local user/email for each repo                             
+                                                                                
+# GH account                                                                    
+Host github.com                                                                 
+   HostName github.com                                                          
+   PreferredAuthentications publickey                                           
+   IdentityFile <path_to_pub_k>                                        
+                                                                                
+# GL RFB                                                                        
+Host gitlab.com                                                                 
+   HostName gitlab.com                                                          
+   PreferredAuthentications publickey                                           
+   IdentityFile <path_to_pub_k>
