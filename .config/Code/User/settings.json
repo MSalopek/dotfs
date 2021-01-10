@@ -3,6 +3,7 @@
     "editor.minimap.enabled": false,
     "keyboard.dispatch": "keyCode",
     "go.autocompleteUnimportedPackages": true,
+    "go.useLanguageServer": true,
     "python.lintOnSave": true,
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
