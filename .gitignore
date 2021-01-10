@@ -1,8 +1,6 @@
 *
 !.zshrc
-!.config/nvim/init.vim 
-!.code_ext_lst.txt
+!.vimrc
 !.config/Code/User/settings.json
-!.config/redshift.conf
 !Readme.md
-!x11_tearfree_settings/
+!multi_git_account_setup_instructions.txt
