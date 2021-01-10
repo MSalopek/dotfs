@@ -1,6 +1,5 @@
 {
     "window.zoomLevel": -1,
-    "workbench.startupEditor": "newUntitledFile",
     "editor.minimap.enabled": false,
     "keyboard.dispatch": "keyCode",
     "go.autocompleteUnimportedPackages": true,
@@ -9,16 +8,6 @@
         "--load-plugins=pylint_django",
         "--errors-only"
     ],
-    "editor.parameterHints.enabled": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.wordBasedSuggestions": false,
-    "editor.acceptSuggestionOnEnter": "on",
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
-    "editor.tabCompletion": "on",
     "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
