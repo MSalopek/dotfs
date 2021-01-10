@@ -1,8 +1,0 @@
-abusaidm.html-snippets
-alexcvzz.vscode-sqlite
-GrapeCity.gc-excelviewer
-jithurjacob.nbpreviewer
-ms-python.python
-ms-vscode.cpptools
-ms-vscode.Go
-redhat.vscode-yaml
