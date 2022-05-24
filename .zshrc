@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf-zsh-plugin)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -101,8 +101,16 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
+# pyenv for managing python versions
+export PATH="/home/msalopek/.pyenv/bin:$PATH"                                   
+eval "$(pyenv init -)"                                                          
+eval "$(pyenv virtualenv-init -)"          
+
 # npm globals path
 export PATH=$PATH:$HOME/.npm-global/bin
+
+# node and other stuff
+export PATH="$HOME/.local/bin:$PATH"
 
 # useful aliases
 alias ll='ls -alh --color=auto'
@@ -112,4 +120,20 @@ alias gip='git push'
 alias gss='git status'
 alias cd..='cd ..'
 alias top='htop'
+alias fifi='git pull --ff-only'
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/msalopek/google-cloud-sdk/path.zsh.inc' ]; then . '/home/msalopek/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/msalopek/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/msalopek/google-cloud-sdk/completion.zsh.inc'; fi
+
+# python poetry package manager
+export PATH="$HOME/.poetry/bin:$PATH"i
+
+# protobuf-compiler
+export PATH="$PATH:$HOME/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
