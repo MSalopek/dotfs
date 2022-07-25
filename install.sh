@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # installs tools for local development
+sudo apt install build-essential -y
 
 sudo apt install git -y
 
